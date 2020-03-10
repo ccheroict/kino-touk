@@ -1,0 +1,94 @@
+insert into movie(id, name) values (1, 'Pojedynek na głosy');
+insert into movie(id, name) values (2, 'Naprzód');
+insert into movie(id, name) values (3, 'Dżentelmeni');
+insert into movie(id, name) values (4, 'Niewidzialny człowiek');
+insert into movie(id, name) values (5, 'Swingersi');
+insert into movie(id, name) values (6, 'SONIC. Szybki jak błyskawica');
+insert into movie(id, name) values (7, 'Joker');
+insert into movie(id, name) values (8, 'Parasite');
+
+set @date = current_date();
+insert into screening(show_time, room, movie_id) values(@date || ' 10:00', '1', 1);
+insert into screening(show_time, room, movie_id) values(@date || ' 13:30', '1', 2);
+insert into screening(show_time, room, movie_id) values(@date || ' 17:30', '1', 2);
+insert into screening(show_time, room, movie_id) values(@date || ' 14:30', '2', 3);
+insert into screening(show_time, room, movie_id) values(@date || ' 20:40', '2', 5);
+insert into screening(show_time, room, movie_id) values(@date || ' 11:20', '3', 7);
+insert into screening(show_time, room, movie_id) values(@date || ' 16:50', '3', 8);
+
+set @date = dateadd(day, 1, current_date());
+insert into screening(show_time, room, movie_id) values(@date || ' 10:20', '1', 5);
+insert into screening(show_time, room, movie_id) values(@date || ' 14:40', '1', 8);
+insert into screening(show_time, room, movie_id) values(@date || ' 21:50', '1', 7);
+insert into screening(show_time, room, movie_id) values(@date || ' 12:15', '2', 4);
+insert into screening(show_time, room, movie_id) values(@date || ' 16:50', '2', 6);
+insert into screening(show_time, room, movie_id) values(@date || ' 20:50', '2', 5);
+insert into screening(show_time, room, movie_id) values(@date || ' 22:30', '2', 8);
+insert into screening(show_time, room, movie_id) values(@date || ' 15:50', '3', 1);
+insert into screening(show_time, room, movie_id) values(@date || ' 18:40', '3', 4);
+insert into screening(show_time, room, movie_id) values(@date || ' 21:30', '3', 2);
+
+set @date = dateadd(day, 2, current_date());
+insert into screening(show_time, room, movie_id) values(@date || ' 11:00', '1', 7);
+insert into screening(show_time, room, movie_id) values(@date || ' 20:30', '1', 2);
+insert into screening(show_time, room, movie_id) values(@date || ' 12:30', '2', 1);
+insert into screening(show_time, room, movie_id) values(@date || ' 15:45', '2', 3);
+insert into screening(show_time, room, movie_id) values(@date || ' 19:10', '2', 7);
+insert into screening(show_time, room, movie_id) values(@date || ' 12:00', '3', 4);
+insert into screening(show_time, room, movie_id) values(@date || ' 16:30', '3', 8);
+insert into screening(show_time, room, movie_id) values(@date || ' 19:50', '3', 6);
+insert into screening(show_time, room, movie_id) values(@date || ' 22:50', '3', 5);
+
+set @date = dateadd(day, 3, current_date());
+insert into screening(show_time, room, movie_id) values(@date || ' 11:00', '1', 5);
+insert into screening(show_time, room, movie_id) values(@date || ' 13:30', '1', 5);
+insert into screening(show_time, room, movie_id) values(@date || ' 17:50', '1', 5);
+insert into screening(show_time, room, movie_id) values(@date || ' 21:45', '1', 8);
+insert into screening(show_time, room, movie_id) values(@date || ' 10:45', '2', 7);
+insert into screening(show_time, room, movie_id) values(@date || ' 17:10', '2', 6);
+insert into screening(show_time, room, movie_id) values(@date || ' 12:00', '3', 8);
+insert into screening(show_time, room, movie_id) values(@date || ' 15:10', '3', 1);
+insert into screening(show_time, room, movie_id) values(@date || ' 18:20', '3', 2);
+insert into screening(show_time, room, movie_id) values(@date || ' 20:50', '3', 5);
+insert into screening(show_time, room, movie_id) values(@date || ' 23:10', '3', 8);
+
+set @date = dateadd(day, 4, current_date());
+insert into screening(show_time, room, movie_id) values(@date || ' 13:20', '1', 3);
+insert into screening(show_time, room, movie_id) values(@date || ' 16:30', '1', 4);
+insert into screening(show_time, room, movie_id) values(@date || ' 20:10', '1', 7);
+insert into screening(show_time, room, movie_id) values(@date || ' 13:20', '2', 7);
+insert into screening(show_time, room, movie_id) values(@date || ' 17:00', '2', 6);
+insert into screening(show_time, room, movie_id) values(@date || ' 20:10', '2', 1);
+insert into screening(show_time, room, movie_id) values(@date || ' 16:10', '3', 2);
+insert into screening(show_time, room, movie_id) values(@date || ' 21:45', '3', 4);
+
+set @date = dateadd(day, 5, current_date());
+insert into screening(show_time, room, movie_id) values(@date || ' 10:25', '1', 7);
+insert into screening(show_time, room, movie_id) values(@date || ' 16:45', '1', 2);
+insert into screening(show_time, room, movie_id) values(@date || ' 12:10', '2', 2);
+insert into screening(show_time, room, movie_id) values(@date || ' 16:45', '2', 5);
+insert into screening(show_time, room, movie_id) values(@date || ' 19:20', '2', 6);
+insert into screening(show_time, room, movie_id) values(@date || ' 11:45', '3', 4);
+insert into screening(show_time, room, movie_id) values(@date || ' 14:00', '3', 8);
+insert into screening(show_time, room, movie_id) values(@date || ' 19:45', '3', 7);
+insert into screening(show_time, room, movie_id) values(@date || ' 21:10', '3', 6);
+
+set @date = dateadd(day, 6, current_date());
+insert into screening(show_time, room, movie_id) values(@date || ' 10:45', '1', 6);
+insert into screening(show_time, room, movie_id) values(@date || ' 13:10', '1', 4);
+insert into screening(show_time, room, movie_id) values(@date || ' 17:35', '1', 5);
+insert into screening(show_time, room, movie_id) values(@date || ' 20:15', '1', 3);
+insert into screening(show_time, room, movie_id) values(@date || ' 11:10', '2', 7);
+insert into screening(show_time, room, movie_id) values(@date || ' 16:30', '2', 3);
+insert into screening(show_time, room, movie_id) values(@date || ' 20:40', '2', 5);
+insert into screening(show_time, room, movie_id) values(@date || ' 23:10', '2', 8);
+insert into screening(show_time, room, movie_id) values(@date || ' 12:25', '3', 2);
+insert into screening(show_time, room, movie_id) values(@date || ' 15:10', '3', 1);
+insert into screening(show_time, room, movie_id) values(@date || ' 17:40', '3', 2);
+insert into screening(show_time, room, movie_id) values(@date || ' 20:15', '3', 5);
+insert into screening(show_time, room, movie_id) values(@date || ' 22:30', '3', 7);
+
+insert into reservation(first_name, last_name, screening_id, expired_time) values('Chung', 'Tran', 1, TIMESTAMPADD(MINUTE, 30, LOCALTIMESTAMP()));
+insert into reserved_seat(seat, price, reservation_id) values ('14', 18, 1);
+insert into reserved_seat(seat, price, reservation_id) values ('21', 25, 1);
+insert into reserved_seat(seat, price, reservation_id) values ('52', 12.5, 1);
